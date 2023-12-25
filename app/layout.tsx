@@ -1,3 +1,7 @@
+import '@/app/ui/global.css';
+import {Cairo , Rubik_Distressed} from 'next/font/google'
+
+const cairo = Rubik_Distressed({subsets : ['latin'] , weight : "400"})
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      
+      <body className={cairo.className}>{children}</body>
     </html>
   );
 }
